@@ -16,18 +16,32 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
                   call the power function with the other two tokens
 
             (...etc.)"""
-
-#while calculating:
-#string = "pow, num1, num2"
-
-input_string = input("Please enter your calculation ")
-     
-token = input_string.split(" ")
-
-arithmetic_function = token[0]
-num1 = int(token[1])
-num2 = int(token[2])
+def use_calculator():
     
-if arithmetic_function == "+":
-    sum = add(num1, num2)
-    print(sum)
+    while True:
+
+    #while != q:
+
+        input_string = input("Please enter your equation > ")
+
+        if input_string == "q":
+            break
+
+        else:
+            token = input_string.split(" ")
+
+            #print(" Select [+] if you wold like to add")
+
+            arithmetic_function = token[0]
+            num1 = int(token[1])
+            num2 = int(token[2])
+        
+            if arithmetic_function == "+":
+                sum = add(num1, num2)
+                print(sum)
+
+            elif arithmetic_function == "-":
+                sub = (subtract(num1, num2))
+                print(sub)
+
+use_calculator()
