@@ -29,8 +29,8 @@ def use_calculator():
             token = input_string.split(" ")
 
             arithmetic_function = token[0]
-            num1 = float(int(token[1]))
-            num2 = float(int(token[2]))
+            num1 = float(token[1])
+            num2 = float(token[2])
         
             if arithmetic_function == "+":
                 solution = add(num1, num2)
