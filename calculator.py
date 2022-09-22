@@ -20,8 +20,6 @@ def use_calculator():
     
     while True:
 
-    #while != q:
-
         input_string = input("Please enter your equation > ")
 
         if input_string == "q":
@@ -30,11 +28,9 @@ def use_calculator():
         else:
             token = input_string.split(" ")
 
-            #print(" Select [+] if you wold like to add")
-
             arithmetic_function = token[0]
-            num1 = int(token[1])
-            num2 = int(token[2])
+            num1 = float(int(token[1]))
+            num2 = float(int(token[2]))
         
             if arithmetic_function == "+":
                 solution = add(num1, num2)
