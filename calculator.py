@@ -37,11 +37,29 @@ def use_calculator():
             num2 = int(token[2])
         
             if arithmetic_function == "+":
-                sum = add(num1, num2)
-                print(sum)
+                solution = add(num1, num2)
 
             elif arithmetic_function == "-":
-                sub = (subtract(num1, num2))
-                print(sub)
+                solution = (subtract(num1, num2))
 
+            elif arithmetic_function == "*":
+                solution = (multiply(num1, num2))
+                
+            elif arithmetic_function == "/":
+                solution = (divide(num1, num2))
+
+            elif arithmetic_function == "square":
+                solution = (square(num1, num2))
+            
+            elif arithmetic_function == "cube":
+                solution = (cube(num1, num2))
+            
+            elif arithmetic_function == "pow":
+                solution = (power(num1, num2))
+
+            elif arithmetic_function == "mod":
+                solution = (mod(num1, num2))
+        
+        print(solution)
+           
 use_calculator()
