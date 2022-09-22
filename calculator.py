@@ -19,43 +19,50 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 def use_calculator():
     
     while True:
-
+        
         input_string = input("Please enter your equation > ")
 
         if input_string == "q":
             break
 
         else:
-            token = input_string.split(" ")
 
-            arithmetic_function = token[0]
-            num1 = float(token[1])
-            num2 = float(token[2])
-        
-            if arithmetic_function == "+":
-                solution = add(num1, num2)
+            try:
 
-            elif arithmetic_function == "-":
-                solution = subtract(num1, num2)
+                token = input_string.split(" ")
 
-            elif arithmetic_function == "*":
-                solution = multiply(num1, num2)
+                arithmetic_function = token[0]
+                num1 = float(token[1])
+                num2 = float(token[2])
+            
+                if arithmetic_function == "+":
+                    solution = add(num1, num2)
+
+                elif arithmetic_function == "-":
+                    solution = subtract(num1, num2)
+
+                elif arithmetic_function == "*":
+                    solution = multiply(num1, num2)
+                    
+                elif arithmetic_function == "/":
+                    solution = divide(num1, num2)
+
+                elif arithmetic_function == "square":
+                    solution = square(num1, num2)
                 
-            elif arithmetic_function == "/":
-                solution = divide(num1, num2)
+                elif arithmetic_function == "cube":
+                    solution = cube(num1, num2)
+                
+                elif arithmetic_function == "pow":
+                    solution = power(num1, num2)
 
-            elif arithmetic_function == "square":
-                solution = square(num1, num2)
+                elif arithmetic_function == "mod":
+                    solution = mod(num1, num2)
             
-            elif arithmetic_function == "cube":
-                solution = cube(num1, num2)
-            
-            elif arithmetic_function == "pow":
-                solution = power(num1, num2)
+                print("{:.2f}".format(solution))
 
-            elif arithmetic_function == "mod":
-                solution = mod(num1, num2)
-        
-        print("{:.2f}".format(solution))
+            except: 
+
+                print("That was not a valid entry. Try again!")
            
 use_calculator()
