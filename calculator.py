@@ -36,25 +36,25 @@ def use_calculator():
                 solution = add(num1, num2)
 
             elif arithmetic_function == "-":
-                solution = (subtract(num1, num2))
+                solution = subtract(num1, num2)
 
             elif arithmetic_function == "*":
-                solution = (multiply(num1, num2))
+                solution = multiply(num1, num2)
                 
             elif arithmetic_function == "/":
-                solution = (divide(num1, num2))
+                solution = divide(num1, num2)
 
             elif arithmetic_function == "square":
-                solution = (square(num1, num2))
+                solution = square(num1, num2)
             
             elif arithmetic_function == "cube":
-                solution = (cube(num1, num2))
+                solution = cube(num1, num2)
             
             elif arithmetic_function == "pow":
-                solution = (power(num1, num2))
+                solution = power(num1, num2)
 
             elif arithmetic_function == "mod":
-                solution = (mod(num1, num2))
+                solution = mod(num1, num2)
         
         print(solution)
            
