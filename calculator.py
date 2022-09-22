@@ -56,6 +56,6 @@ def use_calculator():
             elif arithmetic_function == "mod":
                 solution = mod(num1, num2)
         
-        print(solution)
+        print("{:.2f}".format(solution))
            
 use_calculator()
